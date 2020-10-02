@@ -1,5 +1,8 @@
 'use strict';
 
+const keyWordArray = [];
+
+
 function Horns(horns) {
   this.image_url = horns.image_url;
   this.description = horns.description;
@@ -17,6 +20,7 @@ Horns.prototype.render = function () {
   $hornClone.removeClass('photo-template');
   $hornClone.attr('class', this.keyword);
   $hornClone.css('display', 'block');
+  keyWordArray.push(this.keyword);
 
 };
 
@@ -29,37 +33,30 @@ Horns.readJson = () => {
     .then(data => {
       data.forEach(item => {
         let horn = new Horns(item);
-        console.log(horn);
+        // console.log(horn);
         horn.render();
       });
-    });
+    }).then(fillDropDown);
 };
 
+
+
 $(() => Horns.readJson());
+function fillDropDown() {
+  // console.log(keyWordArray);
+  keyWordArray.sort();
+  // console.log(keyWordArray);
+  //foreach .includes no dupes if statement
+  let removeDupe = keyWordArray.filter((item, i, ar) => ar.indexOf(item) === i);
+  removeDupe.forEach(keyword => {
+    let optionTag = `<option value = '${keyword}'>${keyword}</option>`;
+    $('select').append(optionTag);
+  });
+}
 
-
-
-// let $section1 = document.getElementById('photo-template');
-// let $img = document.getElementById('imgsrc');
-// const imgArray = [];
-
-// $.ajax('./page-1.json').then(data => {
-//   data.forEach(horns => {
-//     imgArray.push(horns);
-//     console.log(horns);
-    // let $newHorns = $img.clone();
-    // $newHorns.attr('src', horns.image_url);
-    // $img.append($newHorns);
-    // $section1.append($img);
-
-
-    //  console.log(horns);
-    // console.log(horns.image_url);
-    // console.log($newHorns);
-//   });
-// });
-
-
-// let $newHorns = $img.clone();
-//     $newHorns.find('h2').text(horns.title);
-//     $newHorns.find('img').attr('src', image_url);
+$('select').on('change', function(e) {
+  let $showAlike = `.${e.target.value}`;
+  console.log($showAlike);
+  $('section').show();
+  $('section').not($showAlike).toggle('hide');
+});
