@@ -16,9 +16,9 @@ Feature 2, Filter images
 Estimate of time needed to complete: 
 1 hour
 Start time: 
-630pm
-Finish time: 
 800pm
+Finish time: 
+930pm
 Actual time needed to complete: 1.5 hours.
 
 
