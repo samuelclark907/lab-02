@@ -1,8 +1,56 @@
-img {
-  width: 100px;
-  height: 100px;
+
+body {
+  width: 100%;
+  margin: auto;
+  font-family: 'Sansita Swashed', cursive;
+  background-color: bisque;
 }
 
-section{
-  display: block;
+h1 {
+  margin: auto;
+  text-align: center;
+  width: 40%;
+  font-size: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  color: rgb(190, 89, 230);
 }
+
+h2 {
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 10px;
+  color: rgb(190, 89, 230);
+}
+
+select {
+  margin-left:30%;
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  
+}
+
+.picture {
+  height: 350px;
+  width: 200px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 14px;
+  
+}
+
+p {
+  font-size: large;
+  color: rgb(103, 25, 139);
+  margin-top: 10px;
+}
+
+
+
+
+
