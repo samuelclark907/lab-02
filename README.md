@@ -23,11 +23,11 @@ Actual time needed to complete: 1.5 hours.
 
 
 Number and name of feature: 
-Feature 1, Display images
+Feature 3, Style the application
 Estimate of time needed to complete: 
 1 hour
 Start time: 
-630pm
+600pm
 Finish time: 
-800pm
-Actual time needed to complete: 1.5 hours.
+630pm
+Actual time needed to complete: 30 min.
