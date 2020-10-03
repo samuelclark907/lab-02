@@ -29,7 +29,7 @@ Horns.readJson = () => {
     method: 'get',
     dataType: 'json'
   };
-  $.ajax('page-1.json', ajaxSettings)
+  $.ajax('data/page-1.json', ajaxSettings)
     .then(data => {
       data.forEach(item => {
         let horn = new Horns(item);
@@ -47,7 +47,7 @@ function fillDropDown() {
   keyWordArray.sort();
   // console.log(keyWordArray);
   //foreach .includes no dupes if statement
-  let removeDupe = keyWordArray.filter((item, i, ar) => ar.indexOf(item) === i);
+  let removeDupe = keyWordArray.filter((item, i, arr) => arr.indexOf(item) === i);
   removeDupe.forEach(keyword => {
     let optionTag = `<option value = '${keyword}'>${keyword}</option>`;
     $('select').append(optionTag);
