@@ -11,6 +11,8 @@ function Horns(horns) {
   this.keyword = horns.keyword;
 }
 
+
+
 Horns.prototype.render = function () {
   let $hornClone = $('.photo-template').clone();
   $('main').append($hornClone);
@@ -54,9 +56,14 @@ function fillDropDown() {
   });
 }
 
-$('select').on('change', function(e) {
+$('select').on('change', function (e) {
   let $showAlike = `.${e.target.value}`;
   console.log($showAlike);
   $('section').show();
   $('section').not($showAlike).toggle('hide');
 });
+
+
+
+
+

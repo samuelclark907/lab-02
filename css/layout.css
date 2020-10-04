@@ -6,6 +6,12 @@ body {
   background-color: bisque;
 }
 
+nav {
+ float: right;
+ font-size: xx-large;
+ margin-right: 30px; 
+}
+
 h1 {
   margin: auto;
   text-align: center;
@@ -28,6 +34,8 @@ select {
   width: 40%;
   margin-bottom: 30px;
 }
+
+
 
 img {
   width: 200px;
